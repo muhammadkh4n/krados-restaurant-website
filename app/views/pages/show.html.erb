@@ -17,10 +17,27 @@
 
       <p>
         <strong>Images:</strong>
-        <% @page.images.each do |image| %>
-          <%= image_tag(image.url, width: "70") %>
+        <ul>
+        <% @page.images.each_with_index do |image, index| %>
+          <li>
+            <%= image_tag(image.url, width: "70") %> |
+            <%= link_to "Destroy", page_image_path(@page, index), method: :delete, data: { confirm: "Are you sure?" } %>
+          </li>
         <% end %>
+        </ul>
       </p>
+
+      <h1>Add Images</h1>
+      <%= form_for(@page, url: page_images_path(@page), method: :post) do |f| %>
+        <div class="field form-group">
+          <%= f.label :images %>
+          <%= f.file_field :images, multiple: true, class: "form-control" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Add More Images", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+      <br><br>
 
       <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary" %> |
       <%= link_to 'Back', pages_path %>

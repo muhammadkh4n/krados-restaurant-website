@@ -11,7 +11,9 @@ Rails.application.routes.draw do
     resources :dishes
     resources :categories
     resources :branches
-    resources :pages
+    resources :pages do
+      resources :images, :only => [:create, :destroy]
+    end
   end
 
   get '/login' => 'sessions#new', as: 'login'
