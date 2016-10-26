@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% if notice %>
+      <p id="notice" class="alert alert-warning"><%= notice %></p>
+      <% end %>
+
+      <p>
+        <strong>Title:</strong>
+        <%= @page.title %>
+      </p>
+
+      <p>
+        <strong>Text:</strong>
+        <%= @page.text %>
+      </p>
+
+      <p>
+        <strong>Images:</strong>
+        <% @page.images.each do |image| %>
+          <%= image_tag(image.url, width: "70") %>
+        <% end %>
+      </p>
+
+      <%= link_to 'Edit', edit_page_path(@page), class: "btn btn-primary" %> |
+      <%= link_to 'Back', pages_path %>
+    </div>
+  </div>
+</div>

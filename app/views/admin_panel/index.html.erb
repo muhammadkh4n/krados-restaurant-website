@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1 class="page-header text-center"><span class="pull-left glyphicon glyphicon-user"></span>Hello <%= current_admin.username %></h1>
+      <div class="admin-content">
+        <h3 class="text-center">Manage Sections</h3>
+        <ul class="list-group">
+          <li class="list-group-item"><%= link_to "Dishes", dishes_path, class: "btn btn-primary btn-block" %></li>
+          <li class="list-group-item"><%= link_to "Pages", pages_path, class: "btn btn-primary btn-block" %></li>
+          <li class="list-group-item"><%= link_to "Admins", admins_path, class: "btn btn-primary btn-block" %></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

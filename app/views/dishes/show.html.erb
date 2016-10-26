@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <% if notice %>
+        <p id="notice" class="alert alert-warning"><%= notice %></p>
+      <% end %>
+      <h1>Dish</h1>
+      <p>
+        <strong>Name:</strong>
+        <%= @dish.name %>
+      </p>
+
+      <p>
+        <strong>Price:</strong>
+        <%= @dish.price %>
+      </p>
+
+      <p>
+        <strong>Description:</strong>
+        <%= @dish.description %>
+      </p>
+
+      <% if @dish.image.file %>
+      <p>
+        <strong>Image:</strong>
+        <%= image_tag(@dish.image_url, alt: "Dish Image", width: "200") %>
+      </p>
+      <% end %>
+
+      <p>
+        <strong>Special:</strong>
+        <%= @dish.special %>
+      </p>
+
+      <p>
+        <strong>Category:</strong>
+        <%= @dish.category_name %>
+      </p>
+
+      <p>
+        <strong>Branch:</strong>
+        <%= @dish.branch_name %>
+      </p>
+
+      <%= link_to 'Edit', edit_dish_path(@dish) %> |
+      <%= link_to 'Back', dishes_path %>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,51 @@
+
+<%= form_for(@dish, html: { multipart: true }) do |f| %>
+  <% if @dish.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger">
+      <h2><%= pluralize(@dish.errors.count, "error") %> prohibited this dish from being saved:</h2>
+
+      <ul>
+      <% @dish.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :price %><br>
+    <%= f.number_field :price, class: "form-control" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control", rows: "4" %>
+  </div>
+  <div class="field form-group">
+    <%= f.label :image %><br>
+    <% if @dish.image.file.nil? %>
+    <%= f.file_field :image, class: "form-control" %>
+    <% else %>
+    <%= f.file_field :image, class: "form-control" %>
+    <p class="help-block">Current Image: <%= @dish.image.file.filename %> <%= image_tag(@dish.image_url, width: "70", class: "img-thumbnail") %></p>
+    <% end %>
+  </div>
+  <div class="field">
+    <%= f.label :special %><br>
+    <%= f.check_box :special %>
+  </div>
+  <div class="field">
+    <%= f.label :category %><br>
+    <%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }, { include_blank: true }, class: "form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label :branch %><br>
+    <%= f.select :branch_id, Branch.all.collect { |b| [b.name, b.id] }, { include_blank: true }, class: "form-control" %>
+  </div><br>
+  <div class="actions">
+    <%= f.submit class: "btn btn-primary" %>
+  </div>
+<% end %>

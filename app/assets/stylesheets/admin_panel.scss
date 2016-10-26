@@ -1,0 +1,27 @@
+// Place all the styles related to the admin_panel controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$admin-border: 1px solid #888;
+
+#admin-bar {
+  background-color: #464646;
+  color: white;
+  padding: 5px;
+
+  .admin-info {
+    display: inline-block;
+    vertical-align: -7px;
+  }
+}
+
+h1.page-header {
+  background-color: #e6e6e6;
+  padding: 10px 20px;
+  border: $admin-border;
+  margin-bottom: 0;
+}
+
+.admin-content {
+  border: $admin-border;
+}

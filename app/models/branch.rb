@@ -1,0 +1,4 @@
+class Branch < ActiveRecord::Base
+  has_many :dishes
+  validates :name, presence: true, uniqueness: { case_sensitive: false }
+end

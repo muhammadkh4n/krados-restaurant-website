@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Krados</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <% if logged_in? %>
+    <div id="admin-bar">
+      <div class="container">
+        <span class="admin-info">Logged in as Admin: <%= current_admin.username %></span>
+        <div class="pull-right">
+          <%= link_to "Admin Panel", admin_panel_url, class: "btn btn-default" %>
+          <%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+  <%= yield %>
+
+</body>
+</html>

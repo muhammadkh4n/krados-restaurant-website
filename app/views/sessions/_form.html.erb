@@ -1,0 +1,19 @@
+<h1>Admin Login</h1>
+<%= form_for(:admin, url: sessions_path) do |f| %>
+  <% if alert %>
+    <div class="alert alert-danger">
+      <%= alert %>
+    </div>
+  <% end %>
+  <div class="form-group">
+    <%= f.label :username %>
+    <%= f.text_field :username, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :password %>
+    <%= f.password_field :password, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit 'Login', class: "btn btn-default" %>
+  </div>
+<% end %>
