@@ -1,3 +1,80 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+//------------VARIABLES---------------------------
+@import "includes/variables";
+
+//------------------------------------------------
+//            BASE STYLES
+//------------------------------------------------
+html, body {
+  height: 100%;
+}
+
+.home-page {
+  background-color: $body-bg;
+  color: $light-black;
+}
+
+.section {
+  padding-top: $section-pad;
+  padding-bottom: $section-pad;
+  text-align: center;
+
+  h1 {
+    padding-bottom: $heading-pad;
+  }
+}
+
+.text-box {
+  background-color: $textbox-bg;
+  font-size: $text-box-font-size;
+  p {
+    padding: $textbox-pad;
+  }
+}
+
+
+// -----------------------------------------------
+//             HEADER
+//------------------------------------------------
+@import "includes/header";
+
+
+//-------------------------------------------------
+//            WELCOME
+//-------------------------------------------------
+@import "includes/welcome";
+
+
+//-------------------------------------------------
+//           SPECIALS
+//-------------------------------------------------
+@import "includes/specials";
+
+//-------------------------------------------------
+//           ABOUT
+//-------------------------------------------------
+@import "includes/about";
+
+//-------------------------------------------------
+//           MISSION
+//-------------------------------------------------
+@import "includes/mission";
+
+//-------------------------------------------------
+//          MENU
+//-------------------------------------------------
+@import "includes/menu";
+
+//-------------------------------------------------
+//          CONTACT
+//-------------------------------------------------
+@import "includes/contact";
+
+
+//-------------------------------------------------
+//          FOOTER
+//-------------------------------------------------
+@import "includes/footer";

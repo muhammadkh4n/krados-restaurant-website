@@ -10,6 +10,7 @@ Dish.destroy_all
 Category.destroy_all
 Branch.destroy_all
 Admin.destroy_all
+Page.destroy_all
 
-admin = Admin.new(username: "muhammadkh4n", password: "mk12345")
+admin = Admin.new(username: ENV["USER"], password: ENV["PASS"])
 admin.save

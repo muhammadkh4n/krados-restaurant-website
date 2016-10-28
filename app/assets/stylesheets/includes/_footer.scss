@@ -1,0 +1,23 @@
+footer {
+  text-align: center;
+  font-size: $footer-font-size;
+  
+  .navbar-default {
+    .navbar-text {
+      float: none;
+      color: $white;
+    }
+    .navbar-link {
+      color: $light-gray;
+
+      &:hover {
+        color: darken($light-gray, 15%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  .navbar {
+    margin: 0;
+  }
+}

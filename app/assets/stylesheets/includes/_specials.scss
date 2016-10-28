@@ -1,0 +1,42 @@
+
+#specials {
+  .desc {
+    color: $light-black;
+  }
+
+  .slider {
+      color: $white;
+      text-align: center;
+  }
+
+  .slide {
+    background-color: $nav-bg;
+    padding: $slide-pad;
+    height: $slide-height;
+    position: relative;
+    width: 100%
+  }
+
+  .slide .dish {
+    position: relative;
+    top: 15%;
+    height: 150px;
+
+    img {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  .slide p {
+    font-size: $spec-dish-font-size;
+    position: relative;
+    padding: 60% 0;
+  }
+
+  .lSSlideOuter .lSPager.lSpg {
+  li.active a, li:hover a {
+      background-color: $nav-bg;
+    }
+  }
+}

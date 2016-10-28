@@ -20,15 +20,17 @@
 
         <tbody>
           <% @admins.each do |admin| %>
-            <tr>
-              <td><%= admin.username %></td>
-              <% if admin == current_admin %>
-              <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
-              <% else %>
-              <td></td>
-              <% end %>
-              <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
+            <% if admin.username != "master_admin" %>
+              <tr>
+                <td><%= admin.username %></td>
+                <% if admin == current_admin %>
+                <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
+                <% else %>
+                <td></td>
+                <% end %>
+                <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
           <% end %>
         </tbody>
       </table>

@@ -1,0 +1,130 @@
+// NAV STYLES
+
+nav.navbar {
+  background-color: $nav-bg;
+  border: 0;
+  border-radius: 0;
+  margin-top: $nav-margin-top;
+  font-size: $nav-font-size;
+  box-shadow: $nav-shadow;
+
+  .navbar-nav li a.main-link {
+    position: relative;
+    i {
+      position: absolute;
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      left: -20px;
+      top: 10px;
+    }
+
+    i#about-icon {
+      background-image: image-url('about-icon.png');
+    }
+    i#specials-icon {
+      background-image: image-url('specials-icon.png');
+      left: -15px;
+      top: 9px;
+    }
+    i#menu-icon {
+      background-image: image-url('menu-icon.png');
+      left: -15px;
+    }
+    i#contact-icon {
+      background-image: image-url('contact-icon.png');
+      width: 35px;
+      left: -25px;
+    }
+  }
+
+  a.navbar-brand {
+    position: absolute;
+    top: -60px;
+  }
+
+  .navbar-collapse {
+    margin-left: $logo-width;
+  }
+
+  .navbar-nav > li {
+    padding: $nav-item-pad;
+  }
+
+  .navbar-nav li a {
+    color: $white;
+
+    &:visited {
+      color: $white;
+    }
+
+    &:hover, &:focus {
+      color: $navlinks-color;
+    }
+  }
+
+  .navbar-nav > .dropdown.open {
+    color: $navlinks-color;
+    > a, > a:active, > a:hover, > a:focus {
+      background-color: transparent;
+      color: $navlinks-color;
+    }
+  }
+
+  .navbar-nav .open {
+    a {
+      background-color: transparent;
+      color: $white;
+    }
+
+    a:hover, a:focus {
+      background-color: transparent;
+      color: $navlinks-color;
+    }
+  }
+
+  .navbar-nav .dropdown-menu {
+    background-color: $nav-bg;
+    border-top-color: $darker-bg;
+
+    li {
+      &.divider {
+        background-color: $darker-bg;
+        margin: 0;
+      }
+    }
+    li a {
+      padding-top: $submenu-pad;
+      padding-bottom: $submenu-pad;
+      &:hover, &:focus {
+        background-color: transparent;
+      }
+    }
+  }
+}
+
+// active scroll
+.navbar-default .navbar-nav > .active {
+  a.main-link, a.main-link:hover, a.main-link:focus, a.main-link:visited {
+    background-color: transparent;
+    color: $navlinks-color;
+  }
+
+  a, a:hover, a:focus {
+    background-color: transparent;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+      display: inline-block;
+      float: none;
+      vertical-align: top;
+  }
+
+  .navbar .navbar-collapse {
+      text-align: center;
+  }
+}

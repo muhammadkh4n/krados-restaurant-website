@@ -8,6 +8,7 @@ $admin-border: 1px solid #888;
   background-color: #464646;
   color: white;
   padding: 5px;
+  text-align: center;
 
   .admin-info {
     display: inline-block;
@@ -24,4 +25,20 @@ h1.page-header {
 
 .admin-content {
   border: $admin-border;
+}
+
+#login-form {
+  width: 500px;
+  margin-top: 20%;
+  background-color: #e3e3e3;
+  padding: 30px 30px 30px 30px;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px #595959;
+
+  h1 {
+    font-size: 1.8em;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 10px;
+  }
 }

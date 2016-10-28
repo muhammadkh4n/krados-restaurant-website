@@ -1,0 +1,9 @@
+#about .images {
+  padding: $about-images-pad;
+  .image {
+    height: 300px;
+    img {
+      height: 100%;
+    }
+  }
+}

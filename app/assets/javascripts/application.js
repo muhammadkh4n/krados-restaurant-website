@@ -12,6 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require bootstrap
+//= require lightslider
+//= require aos
+//= require dropdown
+//= require scroll
 //= require_tree .

@@ -1,0 +1,20 @@
+//------------------ WELCOME SECTION--------------------------
+#welcome {
+  padding-top: $welcome-pad;
+  text-align: inherit;
+}
+
+#welcome h1 {
+  font-size: $welcome-font-size;
+}
+
+.container .jumbotron {
+  padding: 0;
+  height: $jumbo-height;
+  overflow: hidden;
+  box-shadow: $jumbo-shadow;
+
+  img {
+    clip: rect(00px, 0, 0px, 0);
+  }
+}

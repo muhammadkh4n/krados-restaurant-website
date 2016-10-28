@@ -1,0 +1,43 @@
+<div id="menu" class="row section" data-aos="slide-right" data-aos-duration="400">
+  <h1 class="col-xs-12">Menu</h1>
+  <div class="col-xs-12">
+    <ul class="nav nav-tabs" role="tablist">
+      <li role="presentation" class="active"><a href="#krados" aria-controls="krados" role="tab" data-toggle="tab">Krados</a></li>
+      <li role="presentation"><a href="#krados-grill" aria-controls="krados-grill" role="tab" data-toggle="tab">Krados Grill</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content" data-aos="zoom-in" data-aos-duration="400">
+      <div role="tabpanel" class="tab-pane active" id="krados">
+        <% @krados.each do |cat, dishes| %>
+          <h2 class="category" id="<%= cat %>"><%= cat %></h2>
+          <div class="row">
+            <% dishes.each do |dish| %>
+              <div class="col-xs-12 col-sm-6">
+                <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
+                <p>
+                  <%= dish.description %>
+                </p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="krados-grill">
+        <% @krados_grill.each do |cat, dishes| %>
+          <h2 class="category" id="<%= cat %>"><%= cat %></h2>
+          <div class="row">
+            <% dishes.each do |dish| %>
+              <div class="col-xs-12 col-sm-6">
+                <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
+                <p>
+                  <%= dish.description %>
+                </p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
