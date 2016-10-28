@@ -14,7 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require lightslider
-//= require aos
 //= require dropdown
 //= require scroll
 //= require_tree .
