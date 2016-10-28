@@ -46,6 +46,11 @@ group :development do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
+
 gem 'rmagick'
 gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'bootstrap-sass'
