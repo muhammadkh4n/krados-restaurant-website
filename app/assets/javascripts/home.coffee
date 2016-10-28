@@ -64,7 +64,7 @@ $ ->
       }
     ]})
 
-  AOS.init()
+  #AOS.init()
 
   $.fn.bootstrapDropdownHover({
     clickBehavior: 'disable',
