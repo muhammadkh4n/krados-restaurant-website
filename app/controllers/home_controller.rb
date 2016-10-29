@@ -64,7 +64,7 @@ class HomeController < ApplicationController
     def contact
       phone = Page.find_by(title: "phone")
       address = Page.find_by(title: "address")
-      contact_text = Page.find_by(title: "contact")
+      contact_text = Page.find_by(title: "info")
 
       if phone
         @phone = phone
