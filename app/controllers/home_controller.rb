@@ -3,6 +3,7 @@ class HomeController < ApplicationController
   before_action :krados, :krados_grill, :specials, :about, :mission, :contact
 
   def index
+    @message = PointlessFeedback::Message.new
   end
 
   private
