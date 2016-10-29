@@ -44,7 +44,7 @@ class HomeController < ApplicationController
     end
 
     def about
-      page = Page.find_by(title: "About Us")
+      page = Page.find_by(title: "about")
       if page
         @about = page
       else
@@ -53,7 +53,7 @@ class HomeController < ApplicationController
     end
 
     def mission
-      page = Page.find_by(title: "Mission Statement")
+      page = Page.find_by(title: "mission")
       if page
         @mission = page
       else
@@ -62,9 +62,9 @@ class HomeController < ApplicationController
     end
 
     def contact
-      phone = Page.find_by(title: "Phone")
-      address = Page.find_by(title: "Address")
-      contact_text = Page.find_by(title: "Contact Text")
+      phone = Page.find_by(title: "phone")
+      address = Page.find_by(title: "address")
+      contact_text = Page.find_by(title: "contact")
 
       if phone
         @phone = phone

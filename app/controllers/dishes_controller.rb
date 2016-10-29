@@ -57,7 +57,7 @@ class DishesController < ApplicationController
     dish_image_dir = @dish.id
     @dish.destroy
     unless @dish.image.file.nil?
-      FileUtils.remove_dir("#{Rails.root}/app/assets/images/dish/image/#{dish_image_dir}")
+      FileUtils.remove_dir("#{Rails.root}/public/uploads/dish/image/#{dish_image_dir}")
     end
     respond_to do |format|
       format.html { redirect_to dishes_url, notice: 'Dish was successfully destroyed.' }

@@ -57,7 +57,7 @@ class PagesController < ApplicationController
     page_images_dir = @page.id
     @page.destroy
     if @page.images.first
-      FileUtils.remove_dir("#{Rails.root}/app/assets/images/page/images/#{page_images_dir}")
+      FileUtils.remove_dir("#{Rails.root}/public/uploads/page/images/#{page_images_dir}")
     end
     respond_to do |format|
       format.html { redirect_to pages_url, notice: 'Page was successfully destroyed.' }
