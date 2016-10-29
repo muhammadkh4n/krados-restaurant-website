@@ -1,4 +1,4 @@
-class ImagesController < ApplicationController
+class ImagesController < BaseController
   before_action :set_page
 
   def create

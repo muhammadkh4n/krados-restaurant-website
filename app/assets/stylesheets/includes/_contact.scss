@@ -43,7 +43,19 @@
       box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 4px rgba(0, 0, 0, 0.2);
     }
   }
-  input.form-control {
+  input.form-control, select.form-control {
     height: 60px;
+  }
+
+  select.form-control {
+    option:nth-child(1) {
+      color: $form-placeholer;
+    }
+  }
+
+  .btn {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 0;
   }
 }

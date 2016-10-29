@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
+  #mount PointlessFeedback::Engine, :at => '/feedback'
+  post '/messages' => 'pointless_feedback/messages#create'
+
   get '/admin_panel' => 'admin_panel#index', as: 'admin_panel'
 
   scope '/admin_panel' do

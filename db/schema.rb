@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026110656) do
+ActiveRecord::Schema.define(version: 20161029114116) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -53,6 +53,15 @@ ActiveRecord::Schema.define(version: 20161026110656) do
     t.datetime "created_at",                      null: false
     t.datetime "updated_at",                      null: false
     t.text     "images",     default: "--- []\n"
+  end
+
+  create_table "pointless_feedback_messages", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email_address"
+    t.string   "topic"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

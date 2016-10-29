@@ -1,8 +1,9 @@
-class HomeController < ApplicationController
+class HomeController < BaseController
   skip_before_action :ensure_login
   before_action :krados, :krados_grill, :specials, :about, :mission, :contact
 
   def index
+    @message = PointlessFeedback::Message.new
   end
 
   private

@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class SessionsController < BaseController
   skip_before_action :ensure_login, only: [:new, :create]
 
   def new

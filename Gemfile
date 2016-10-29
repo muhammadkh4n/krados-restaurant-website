@@ -54,3 +54,4 @@ end
 gem 'rmagick'
 gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'bootstrap-sass'
+gem 'pointless_feedback'

@@ -1,4 +1,4 @@
-class AdminsController < ApplicationController
+class AdminsController < BaseController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
   before_action :verify_admin, only: [:edit, :update]
   before_action :no_destroy_self, only: [:destroy]

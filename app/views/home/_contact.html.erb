@@ -4,20 +4,63 @@
     <div class="text-box">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <form action="">
-            <div class="form-group" data-aos="fade-right" data-aos-duration="500">
-              <input type="text" class="form-control" placeholder="Name">
+          <% if notice %>
+            <p id="notice" class="alert alert-success"><%= notice %></p>
+          <% end %>
+          <% if PointlessFeedback.using_captcha? %>
+            <head>
+              <script src='https://www.google.com/recaptcha/api.js'></script>
+            </head>
+          <% end %>
+
+          <%= form_for(@message) do |f| %>
+            <% if @message.errors.any? %>
+              <div class="error_messages alert alert-danger">
+                <h2>
+                  <%= I18n.t('activerecord.errors.header', :default => 'Invalid Fields') %>
+                </h2>
+
+                <p>
+                  <%= I18n.t('activerecord.errors.message', :default => 'Correct the following errors and try again.') %>
+                </p>
+
+                <ul>
+                  <% @message.errors.full_messages.each do |message| %>
+                    <li><%= message.html_safe %></li>
+                  <% end %>
+                </ul>
+              </div>
+            <% end %>
+
+            <div class="field form-group">
+              <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
             </div>
-            <div class="form-group" data-aos="fade-right" data-aos-duration="600">
-              <input type="text" class="form-control" placeholder="Email">
+
+            <div class="field form-group">
+              <%= f.text_field :email_address, placeholder: "Email", class: "form-control" %>
             </div>
-            <div class="form-group" data-aos="fade-right" data-aos-duration="700">
-              <input type="text" class="form-control" placeholder="Phone">
+
+            <div class="field form-group">
+              <%= f.select :topic, PointlessFeedback.message_topics, { :prompt => true }, class: "form-control" %>
             </div>
-            <div class="form-group" data-aos="fade-right" data-aos-duration="800">
-              <textarea name="name" rows="8" class="form-control" placeholder="Message"></textarea>
+
+            <div class="field">
+              <%= f.text_area :description, placeholder: "Message", class: "form-control", rows: "6" %>
             </div>
-          </form>
+
+            <!-- This is a honeypot field to keep the spammers away. Do not remove. -->
+            <!-- If this field is filled in, feedback will not be emailed -->
+            <div class="contact-input" style="position: absolute; left: -9999px;">
+              <%= f.text_field :contact_info %>
+            </div>
+            <!-- End of honeypot field -->
+
+            <% if PointlessFeedback.using_captcha? %>
+              <div class="g-recaptcha" data-sitekey="<%= PointlessFeedback.google_captcha_site_key %>"></div>
+            <% end %>
+
+            <%= f.submit 'Send', class: "btn btn-default btn-lg pull-left" %>
+          <% end %>
         </div>
         <div class="col-xs-12 col-md-6" id="address" data-aos="fade-left" data-aos-duration="500">
           <p id="phone">PH: <%= @phone.text %></p>
