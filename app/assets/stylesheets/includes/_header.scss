@@ -27,7 +27,6 @@ nav.navbar {
     i#specials-icon {
       background-image: image-url('specials-icon.png');
       left: -15px;
-      top: 9px;
     }
     i#menu-icon {
       background-image: image-url('menu-icon.png');
@@ -35,7 +34,7 @@ nav.navbar {
     }
     i#contact-icon {
       background-image: image-url('contact-icon.png');
-      width: 35px;
+      width: 32px;
       left: -25px;
     }
   }
@@ -43,6 +42,10 @@ nav.navbar {
   a.navbar-brand {
     position: absolute;
     top: -60px;
+
+    img {
+      width: 150px;
+    }
   }
 
   .navbar-collapse {

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require panorama_viewer
 //= require lightslider
 //= require dropdown
 //= require scroll

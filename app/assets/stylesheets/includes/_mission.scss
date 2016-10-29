@@ -1,10 +1,9 @@
 #mission {
-  .main-image {
-    overflow: hidden;
-    height: 700px;
+  .image {
+    margin-bottom: 20px;
+  }
 
-    img {
-      margin-left: -250px;
-    }
+  .main-image img {
+    min-width: 100%;
   }
 }

@@ -21,15 +21,19 @@
       color: $white;
       border: none;
       border-radius: 0;
+      margin-right: 0;
+      border-bottom: 3px solid $nav-bg;
     }
 
     li a:hover, li a:focus {
-      background-color: $darker-bg;
+      background-color: transparent;
+      border-bottom: 3px solid $navlinks-color;
     }
 
     li.active a, li.active a:hover {
       color: $white;
-      background-color: $darker-bg;
+      background-color: transparent;
+      border-bottom: 3px solid $navlinks-color;
     }
   }
 

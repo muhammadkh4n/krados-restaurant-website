@@ -1,9 +1,10 @@
 #about .images {
-  padding: $about-images-pad;
   .image {
-    height: 300px;
-    img {
-      height: 100%;
-    }
+    overflow: hidden;
+    margin-bottom: 15px;
   }
+}
+
+#about .text-box {
+  margin-bottom: 15px;
 }

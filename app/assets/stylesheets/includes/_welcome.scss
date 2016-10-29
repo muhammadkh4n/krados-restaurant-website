@@ -13,8 +13,10 @@
   height: $jumbo-height;
   overflow: hidden;
   box-shadow: $jumbo-shadow;
+}
 
-  img {
-    clip: rect(00px, 0, 0px, 0);
+.panorama {
+  .pv-inner {
+    height: $jumbo-height;
   }
 }
