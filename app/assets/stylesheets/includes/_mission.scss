@@ -1,9 +1,32 @@
 #mission {
   .image {
     margin-bottom: 20px;
+    img {
+      cursor: pointer;
+    }
   }
 
-  .main-image img {
+  .main-image {
+    margin-bottom: 0;
+    img {
+      min-width: 100%;
+    }
+  }
+}
+
+#image-modal {
+  .modal-content {
+    background-color: $nav-bg;
+  }
+  img {
     min-width: 100%;
+  }
+
+  button {
+    padding: 0px 8px;
+    font-size: 1.8em;
+    color: $navlinks-color;
+    opacity: 1;
+    text-shadow: none;
   }
 }

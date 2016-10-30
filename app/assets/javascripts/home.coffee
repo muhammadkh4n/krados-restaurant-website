@@ -75,3 +75,13 @@ $ ->
     animationTime: 700,         # This allows you to set the easing time when the image is being dragged. Set this to 0 to make it instant. The default value is 700.
     easing: "ease-out",         # You can define the easing options here. This option accepts CSS easing options. Available options are "ease", "linear", "ease-in", "ease-out", "ease-in-out", and "cubic-bezier(...))". The default value is "ease-out".
     overlay: true
+
+  image = $("#mission .image")
+  img = image.find 'img'
+  image_modal = $('#image-modal')
+  image_html = image_modal.find "#image-html"
+  img.click (e) ->
+    e.preventDefault()
+    html = $(this).parent().html()
+    image_html.html(html)
+    image_modal.modal('show')
