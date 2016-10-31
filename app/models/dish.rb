@@ -3,7 +3,7 @@ class Dish < ActiveRecord::Base
   belongs_to :category
   belongs_to :branch
 
-  validates :name, presence: true, uniqueness: { case_sensitive: false }
+  validates :name, presence: true
   validates_presence_of :price, :description, :category, :branch
   validate :special_dish, on: :create
 
@@ -19,5 +19,10 @@ class Dish < ActiveRecord::Base
 
   def branch_name
     self.branch.name if self.branch
+  end
+
+  # Special dishes
+  def self.special_dishes
+    return where(special: true)
   end
 end

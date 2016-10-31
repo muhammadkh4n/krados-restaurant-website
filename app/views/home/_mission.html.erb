@@ -1,32 +1,34 @@
 <div id="mission" class="row section">
-  <h1 class="col-xs-12" data-aos="slide-right">Mission Statement</h1>
-  <div class="col-xs-12">
-    <div class="text-box" data-aos="slide-left">
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
-            <p>
-              <%= @mission.text %>
-            </p>
-        </div>
-        <div class="col-xs-12 col-md-6">
-          <div class="main-image image">
-            <%= image_tag @mission.images.first, class: "img-responsive" %>
+  <h1 class="col-xs-12">Mission Statement</h1>
+  <% if @pages["mission"] %>
+    <div class="col-xs-12">
+      <div class="text-box">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+              <p>
+                <%= @pages["mission"].text %>
+              </p>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="main-image image">
+              <%= image_tag @pages["mission"].images.first, class: "img-responsive" %>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-xs-12">
-    <div class="row">
-      <% @mission.images.each_with_index do |image, i| %>
-        <% if i > 0 %>
-          <div class="col-xs-6 col-md-3 image">
-            <%= image_tag(image, class: "img-responsive") %>
-          </div>
+    <div class="col-xs-12">
+      <div class="row">
+        <% @pages["mission"].images.each_with_index do |image, i| %>
+          <% if i > 0 %>
+            <div class="col-xs-6 col-md-3 image">
+              <%= image_tag(image, class: "img-responsive") %>
+            </div>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
   <div class="modal fade" tabindex="-1" role="dialog" id="image-modal">
     <div class="modal-dialog" role="document">
