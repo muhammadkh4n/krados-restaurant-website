@@ -38,19 +38,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
-
-  # Mailer
-  config.action_mailer.delivery_method = :smtp
-
-  config.action_mailer.smtp_settings = {
-    :user_name => ENV['MAILER_EMAIL_ADDRESS'],
-    :password => ENV['MAILER_EMAIL_PASS'],
-    :address => 'smtp.office365.com',
-    :domain => 'krados.com',
-    :port => 587,
-    :authentication => :login,
-    :openssl_verify_mode  => 'none',
-    :enable_starttls_auto => true
-  }
-
 end

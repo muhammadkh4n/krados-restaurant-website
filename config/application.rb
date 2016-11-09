@@ -22,5 +22,17 @@ module Krados
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    # Mailer
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+      :user_name => ENV['MAILER_EMAIL_ADDRESS'],
+      :password => ENV['MAILER_EMAIL_PASS'],
+      :address => 'smtp.office365.com',
+      :domain => 'krados.com',
+      :port => 587,
+      :authentication => :login,
+      :enable_starttls_auto => true
+    }
   end
 end
