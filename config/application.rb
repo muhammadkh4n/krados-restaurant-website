@@ -33,7 +33,7 @@ module Krados
       :domain => 'krados.com',
       :port => 587,
       :authentication => :login,
-      :ssl => false
+      :ssl => false,
       :enable_starttls_auto => true
     }
   end
