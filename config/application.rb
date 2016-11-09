@@ -24,6 +24,7 @@ module Krados
     config.active_record.raise_in_transactional_callbacks = true
 
     # Mailer
+    config.action_mailer.raise_delivery_errors = true
     config.action_mailer.delivery_method = :smtp
     config.action_mailer.smtp_settings = {
       :user_name => ENV['MAILER_EMAIL_ADDRESS'],
@@ -31,7 +32,9 @@ module Krados
       :address => 'smtp.office365.com',
       :domain => 'krados.com',
       :port => 587,
-      :authentication => :login
+      :authentication => :login,
+      :ssl => false
+      :enable_starttls_auto => true
     }
   end
 end
