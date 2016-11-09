@@ -31,8 +31,7 @@ module Krados
       :address => 'smtp.office365.com',
       :domain => 'krados.com',
       :port => 587,
-      :authentication => :login,
-      :enable_starttls_auto => true
+      :authentication => :login
     }
   end
 end
