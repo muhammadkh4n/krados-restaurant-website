@@ -8,8 +8,8 @@ PointlessFeedback.setup do |config|
   # Variables needed for emailing feedback
   config.email_feedback            = true
   # config.send_from_submitter       = true
-  config.from_email                = ENV['MAILER_EMAIL_ADDRESS']
-  config.to_emails                 = [ENV['MAILER_EMAIL_ADDRESS']]
+  config.from_email                = 'azeem.ak@krados.com'
+  config.to_emails                 = ['azeem.ak@krados.com']
   # config.google_captcha_site_key   = nil
   # config.google_captcha_secret_key = nil
 end
