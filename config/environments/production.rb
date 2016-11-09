@@ -85,8 +85,9 @@ Rails.application.configure do
     :password => ENV['MAILER_EMAIL_PASS'],
     :address => 'smtp.office365.com',
     :domain => 'krados.com',
-    :port => '25',
+    :port => 587,
     :authentication => :login,
+    :openssl_verify_mode  => 'none',
     :enable_starttls_auto => true
   }
 end

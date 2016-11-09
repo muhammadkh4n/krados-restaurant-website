@@ -49,6 +49,7 @@ Rails.application.configure do
     :domain => 'krados.com',
     :port => '25',
     :authentication => :login,
+    :openssl_verify_mode  => 'none',
     :enable_starttls_auto => true
   }
 
