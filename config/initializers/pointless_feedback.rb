@@ -7,9 +7,9 @@ PointlessFeedback.setup do |config|
   # Configure feedback email properties (disabled by default)
   # Variables needed for emailing feedback
   config.email_feedback            = true
-  config.send_from_submitter       = true
-  #config.from_email                = 'feedback@krados.com'
-  config.to_emails                 = ['feedback@krados.com']
+  # config.send_from_submitter       = true
+  config.from_email                = ENV['MAILER_EMAIL_ADDRESS']
+  config.to_emails                 = [ENV['MAILER_EMAIL_ADDRESS']]
   # config.google_captcha_site_key   = nil
   # config.google_captcha_secret_key = nil
 end

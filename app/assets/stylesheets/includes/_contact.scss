@@ -4,9 +4,10 @@
 
     p {
       font-size: $address-p-font-size;
+      padding: 20px 0 10px 0;
     }
 
-    p#phone {
+    p#phone, p#email {
       font-size: $phone-font-size;
       font-weight: bold;
     }

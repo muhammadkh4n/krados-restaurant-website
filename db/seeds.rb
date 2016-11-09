@@ -12,5 +12,5 @@ Branch.destroy_all
 Admin.destroy_all
 Page.destroy_all
 
-admin = Admin.new(username: 'master_admin', password: "K7<bhT8<Kc'[}q`s")
+admin = Admin.new(username: ENV['ADMIN'], password: ENV["ADMIN_PASS"])
 admin.save

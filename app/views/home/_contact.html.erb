@@ -4,9 +4,6 @@
     <div class="text-box">
       <div class="row">
         <div class="col-xs-12 col-md-6">
-          <% if notice %>
-            <p id="notice" class="alert alert-success"><%= notice %></p>
-          <% end %>
           <% if PointlessFeedback.using_captcha? %>
             <head>
               <script src='https://www.google.com/recaptcha/api.js'></script>
@@ -63,7 +60,8 @@
           <% end %>
         </div>
         <div class="col-xs-12 col-md-6" id="address">
-          <p id="phone">PH: <%= @pages["phone"] ? @pages["phone"].text : "" %></p>
+          <p id="phone">Ph: <%= @pages["phone"] ? @pages["phone"].text : "" %></p>
+          <p id="email">Email: <%= @pages["email"] ? @pages["email"].text : "" %></p>
           <h3>Address:</h3>
           <address class="">
             <%= @pages["address"] ? @pages["address"].text : "" %>

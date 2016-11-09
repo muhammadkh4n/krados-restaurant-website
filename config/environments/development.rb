@@ -14,7 +14,7 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
@@ -43,12 +43,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    :user_name => 'c1f091af918b86',
-    :password => '503e049a979ca3',
-    :address => 'mailtrap.io',
-    :domain => 'mailtrap.io',
-    :port => '2525',
-    :authentication => :cram_md5
+    :user_name => ENV['MAILER_EMAIL_ADDRESS'],
+    :password => ENV['MAILER_EMAIL_PASS'],
+    :address => 'smtp.office365.com',
+    :domain => 'krados.com',
+    :port => '587',
+    :authentication => :login,
+    :enable_starttls_auto => true
   }
 
 end
