@@ -17,6 +17,8 @@ $(document).ready(function() {
       endPos--;
     }, 40);
 
+    clearInterval(menuSlider);
+
     // fullscreen button
     $("#menu-full").click(function() {
       $('.menu-slider').fullScreen(true);

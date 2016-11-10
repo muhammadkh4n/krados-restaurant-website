@@ -14,13 +14,16 @@ button#menu-full {
   width: 100%;
   position: relative;
 
+  .col-xs-12, .col-sm-6 {
+    padding: 0 30px;
+  }
+
   h1 {
     margin: 0;
     padding: 20px 0;
   }
 
   .text-box {
-    padding: 10px 30px;
     position: absolute;
     top: 80px;
     left: 50px;
@@ -34,6 +37,7 @@ button#menu-full {
     position: absolute;
     margin: 10px 0;
     width: 100%;
+    padding: 10px 30px;
   }
 
   h2 {
@@ -68,7 +72,7 @@ button#menu-full {
 
   h3 > span.dish-price {
     position: absolute;
-    right: 20px;
+    right: 0px;
     top: 4px;
     color: $nav-bg;
     background-color: $textbox-bg;
