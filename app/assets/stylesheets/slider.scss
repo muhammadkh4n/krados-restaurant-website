@@ -7,6 +7,12 @@ button#menu-full {
   right: 10px;
 }
 
+button#menu-record {
+  position: absolute;
+  top: 55px;
+  right: 55px;
+}
+
 .menu-slider {
   $pad: 50px;
   background: $body-bg;
