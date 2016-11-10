@@ -81,23 +81,23 @@ $(document).ready(function() {
           removeActive(links);
           $("#welcome-a").addClass("active");
         }
-        if (pos > getPosition(specials) - 200) {
+        if (pos > getPosition(about) - 150 && pos < getPosition(specials) - 50) {
+          removeActive(links);
+          $("#about-a").addClass("active");
+        }
+        if (pos > getPosition(specials) - 150 && pos < getPosition(mission) - 50) {
           removeActive(links);
           $("#specials-a").addClass("active");
         }
-        if (pos > getPosition(about) - 200) {
+        if (pos > getPosition(mission) - 150 && pos < getPosition(menu) - 50) {
           removeActive(links);
           $("#about-a").addClass("active");
         }
-        if (pos > getPosition(mission) - 200) {
-          removeActive(links);
-          $("#about-a").addClass("active");
-        }
-        if (pos > getPosition(menu) - 200) {
+        if (pos > getPosition(menu) - 150 && pos < getPosition(contact) - 50) {
           removeActive(links);
           $("#menu-a").addClass("active");
         }
-        if (pos > getPosition(contact) - 200) {
+        if (pos > getPosition(contact) - 150) {
           removeActive(links);
           $("#contact-a").addClass("active");
         }
