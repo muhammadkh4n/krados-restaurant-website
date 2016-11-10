@@ -13,7 +13,8 @@
       <div class="container">
         <span class="admin-info">Logged in as Admin: <%= current_admin.username %></span>
         <div class="pull-right">
-          <%= link_to "Admin Panel", admin_panel_url, class: "btn btn-default" %>
+          <%= link_to_unless_current "Admin Panel", admin_panel_url, class: "btn btn-default" %>
+          <%= link_to_unless_current "Home Page", home_url, class: "btn btn-default" %>
           <%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-danger" %>
         </div>
       </div>
