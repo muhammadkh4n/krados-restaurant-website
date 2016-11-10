@@ -17,6 +17,8 @@ Rails.application.routes.draw do
     resources :pages do
       resources :images, :only => [:create, :destroy]
     end
+    get 'sliders' => 'slider#index', as: 'sliders'
+    get 'slider/:id' => 'slider#show', as: 'slider'
   end
 
   get '/login' => 'sessions#new', as: 'login'

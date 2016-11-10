@@ -20,4 +20,17 @@ class Branch < ActiveRecord::Base
     end
     res
   end
+
+  # Get branch menu
+  def group_dishes_by_category
+    res = {}
+    self.dishes.each do |dish|
+      if res[dish.category_name].nil?
+        res[dish.category_name] = [dish]
+      else
+        res[dish.category_name] << dish
+      end
+    end
+    res
+  end
 end

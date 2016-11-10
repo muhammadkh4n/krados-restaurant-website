@@ -1,0 +1,83 @@
+// Place all the styles related to the slider controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+button#menu-full {
+  position: absolute;
+  top: 55px;
+  right: 10px;
+}
+
+.menu-slider {
+  $pad: 50px;
+  background: $body-bg;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  h1 {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .text-box {
+    padding: 10px 30px;
+    position: absolute;
+    top: 80px;
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .menu-list {
+    position: absolute;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  h2 {
+    text-align: center;
+    padding-bottom: $menu-cat-pad;
+    font-size: 2.2em;
+    font-weight: bold;
+  }
+
+  h3 {
+    position: relative;
+    height: 45px;
+  }
+
+  h3 > span.dish-name {
+    background-color: $textbox-bg;
+    position: absolute;
+    z-index: 99;
+    padding-right: 15px;
+    font-size: 2em;
+  }
+
+  h3 > i.price-line {
+    height: 1px;
+    width: 90%;
+    background-color: $light-black;
+    position: absolute;
+    left: 10px;
+    top: 26px;
+    z-index: 0;
+  }
+
+  h3 > span.dish-price {
+    position: absolute;
+    right: 20px;
+    top: 4px;
+    color: $nav-bg;
+    background-color: $textbox-bg;
+    padding-right: 0;
+    font-size: 1.8em;
+    padding-left: 15px;
+  }
+
+  p {
+    padding: $menu-desc-pad;
+  }
+}

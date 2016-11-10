@@ -1,0 +1,21 @@
+<div class="container">
+  <table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>
+          Branch
+        </th>
+        <th colspan="1">
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @branches.each do |branch| %>
+        <tr>
+          <td><%= branch.name %></td>
+          <td><%= link_to 'Show', slider_path(id: branch.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

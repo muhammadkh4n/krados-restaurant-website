@@ -61,7 +61,7 @@
 
   h3 > i.price-line {
     height: 1px;
-    width: 80%;
+    width: 90%;
     background-color: $light-black;
     position: absolute;
     left: 10px;
@@ -75,7 +75,7 @@
     top: 2px;
     color: $nav-bg;
     background-color: $textbox-bg;
-    padding-right: $span-pad;
+    padding-right: 0;
     font-size: $price-font-size;
     padding-left: 15px;
   }

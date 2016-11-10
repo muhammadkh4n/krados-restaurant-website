@@ -17,4 +17,5 @@
 //= require lightslider
 //= require dropdown
 //= require scroll
+//= require fullscreen
 //= require_tree .

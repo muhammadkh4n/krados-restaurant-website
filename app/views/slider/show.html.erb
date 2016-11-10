@@ -1,0 +1,29 @@
+<div class="menu-slider">
+  <h1 class="text-center">Our Menu</h1>
+  <div class="text-box">
+    <div class="menu-list">
+      <% 5.times do |i| %>
+        <% @branch.each_with_index do |(category, dishes), j| %>
+          <% if i == 0 && j == 0 %>
+            <h2 class="category" id="startPos"><%= category %></h2>
+          <% elsif i == 3 && j == 0 %>
+            <h2 class="category" id="endPos"><%= category %></h2>
+          <% else %>
+            <h2 class="category"><%= category %></h2>
+          <% end %>
+          <div class="row">
+            <% dishes.each do |dish| %>
+              <div class="col-xs-12 col-sm-6">
+                <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
+                <p>
+                  <%= dish.description %>
+                </p>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<button type="button" name="button" id="menu-full" class="btn btn-default"><span class="glyphicon glyphicon-fullscreen"></span></button>
