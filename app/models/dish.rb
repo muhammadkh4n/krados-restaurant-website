@@ -4,7 +4,7 @@ class Dish < ActiveRecord::Base
   belongs_to :branch
 
   validates :name, presence: true
-  validates_presence_of :price, :description, :category, :branch
+  validates_presence_of :price, :category, :branch
   validate :special_dish, on: :create
 
   def special_dish

@@ -30,19 +30,19 @@
             <% end %>
 
             <div class="field form-group">
-              <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+              <%= f.text_field :name, placeholder: "Name", class: "form-control", required: true %>
             </div>
 
             <div class="field form-group">
-              <%= f.text_field :email_address, placeholder: "Email", class: "form-control" %>
+              <%= f.text_field :email_address, placeholder: "Email", class: "form-control", required: true %>
             </div>
 
             <div class="field form-group">
-              <%= f.select :topic, PointlessFeedback.message_topics, { :prompt => true }, class: "form-control" %>
+              <%= f.select :topic, PointlessFeedback.message_topics, { :prompt => true }, class: "form-control", required: true %>
             </div>
 
             <div class="field">
-              <%= f.text_area :description, placeholder: "Message", class: "form-control", rows: "6" %>
+              <%= f.text_area :description, placeholder: "Message", class: "form-control", rows: "6", required: true %>
             </div>
 
             <!-- This is a honeypot field to keep the spammers away. Do not remove. -->
