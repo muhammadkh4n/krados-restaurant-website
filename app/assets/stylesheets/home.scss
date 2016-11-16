@@ -232,6 +232,14 @@ html, body {
   #about .image img {
     width: 100%;
   }
+
+  // FOOTER
+  footer {
+    text-align: center;
+    .navbar-text {
+      float: none !important;
+    }
+  }
 }
 
 
