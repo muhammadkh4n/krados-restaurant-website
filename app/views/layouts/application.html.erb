@@ -24,7 +24,13 @@
   <%= yield %>
 
 <script>
-  AOS.init();
+  AOS.init({
+    offset: 200,
+    disable: 'mobile',
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+  });
 </script>
 </body>
 </html>
