@@ -18,4 +18,5 @@
 //= require dropdown
 //= require scroll
 //= require fullscreen
+//= require aos
 //= require_tree .

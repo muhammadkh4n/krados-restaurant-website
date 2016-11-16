@@ -1,18 +1,27 @@
 footer {
-  text-align: center;
-  font-size: $footer-font-size;
-  
+  // text-align: center;
+  font-size: 0.8em;
+
   .navbar-default {
     .navbar-text {
-      float: none;
+      // float: none;
       color: $white;
+      margin-left: 0;
+      margin-right: 0;
     }
     .navbar-link {
-      color: $light-gray;
+      color: $navlinks-color;
+
+      &.author {
+        color: $white;
+        text-decoration: underline;
+        &:hover {
+        color: $light-gray;
+        }
+      }
 
       &:hover {
-        color: darken($light-gray, 15%);
-        text-decoration: none;
+        color: $navlinks-color;
       }
     }
   }
