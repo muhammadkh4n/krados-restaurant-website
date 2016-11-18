@@ -12,7 +12,7 @@
       <div class="images row">
         <% @pages["about"].images.each_with_index do |image, i| %>
           <div class="image col-xs-12 col-sm-4" data-aos="fade-up"
-            data-aos-delay="<%= i+1 * 100 %>"><%= image_tag image, class: "img-responsive" %>
+            data-aos-delay="<%= ((i+1) * 100) %>"><%= image_tag image, class: "img-responsive" %>
           </div>
         <% end %>
       </div>
