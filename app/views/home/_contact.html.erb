@@ -29,19 +29,19 @@
               </div>
             <% end %>
 
-            <div class="field form-group" data-aos="fade-right" data-aos-delay="200">
+            <div class="field form-group" data-aos="fade-right" data-aos-delay="250">
               <%= f.text_field :name, placeholder: "Name", class: "form-control", required: true %>
             </div>
 
-            <div class="field form-group" data-aos="fade-right" data-aos-delay="250">
+            <div class="field form-group" data-aos="fade-right" data-aos-delay="300">
               <%= f.email_field :email_address, placeholder: "Email", class: "form-control", required: true %>
             </div>
 
-            <div class="field form-group" data-aos="fade-right" data-aos-delay="300">
+            <div class="field form-group" data-aos="fade-right" data-aos-delay="350">
               <%= f.select :topic, PointlessFeedback.message_topics, { :prompt => true }, class: "form-control", required: true %>
             </div>
 
-            <div class="field" data-aos="fade-right" data-aos-delay="350">
+            <div class="field" data-aos="fade-right" data-aos-delay="400">
               <%= f.text_area :description, placeholder: "Message", class: "form-control", rows: "6", required: true %>
             </div>
 
@@ -59,7 +59,7 @@
             <%= f.submit 'Send', class: "btn btn-default btn-lg pull-left" %>
           <% end %>
         </div>
-        <div class="col-xs-12 col-md-6" id="address" data-aos="fadefade-left" data-aos-delay="200">
+        <div class="col-xs-12 col-md-6" id="address" data-aos="fade-left" data-aos-delay="250">
           <p id="phone">Ph: <%= @pages["phone"] ? @pages["phone"].text : "" %></p>
           <p id="email">Email: <%= @pages["email"] ? @pages["email"].text : "" %></p>
           <h3>Address:</h3>

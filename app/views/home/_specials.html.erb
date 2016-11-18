@@ -6,7 +6,7 @@
   <div class="slider col-xs-12">
     <ul id="specials-slider">
       <% @specials.each_with_index do |special, i| %>
-        <li class="slide" data-aos="fade-right" data-aos-delay="<%= ((i+1) * 100) %>">
+        <li class="slide" data-aos="fade-right" data-aos-delay="<%= ((i+2) * 100) %>">
           <h3><%= special.name %></h3>
           <div class="dish">
             <%= image_tag special.image, class: "img-responsive" %>
