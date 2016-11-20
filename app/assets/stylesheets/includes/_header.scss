@@ -58,6 +58,7 @@ nav.navbar {
 
   .navbar-nav li a {
     color: $white;
+    transition: color 0.2s;
 
     &:visited {
       color: $white;

@@ -9,19 +9,19 @@ $(document).ready(function() {
 
     var links = $(".nav.navbar-nav li");
 
-    function removeActive(element) {
+    var removeActive = function (element) {
       element.each(function() {
         $(this).removeClass("active");
       });
-    }
+    };
 
     // Get position of the top border of element.
-    function getPosition(element) {
+    var getPosition = function (element) {
       return element.position().top;
-    }
+    };
 
     var clicked = false;
-    function scrolltoSection(element, position, e) {
+    var scrolltoSection = function (element, position, e) {
       e.preventDefault();
       clicked = true;
       $("body, html").animate({ scrollTop: position }, 500, function() {
@@ -29,7 +29,7 @@ $(document).ready(function() {
       });
       removeActive(links);
       $(element).parent().addClass("active");
-    }
+    };
 
     $("#welcome-a").on('click', function(e) {
       scrolltoSection(this, 0, e);
@@ -72,9 +72,26 @@ $(document).ready(function() {
       $(".nav-tabs a[href='#krados']").parent().removeClass("active");
     });
 
-    $(window).on('scroll', function(e) {
-      e.preventDefault();
+    var origMargin = $("#main-navbar").css("margin-top");
+    var origTop = $(".navbar-brand").css("top");
+    var origWidth = $(".navbar-brand img").css("width");
+    var margin = parseInt(origMargin);
+    var happened = false;
+
+    $(window).on('scroll', function() {
       var pos = $(this).scrollTop();
+
+      if (pos >= margin && !happened) {
+        $("#main-navbar").animate({"margin-top": "0px"}, 200);
+        $(".navbar-brand").animate({top: "-15px"}, 200);
+        $(".navbar-brand img").animate({width: "110px"}, 200);
+        happened = true;
+      } else if (happened && pos <= margin) {
+        $("#main-navbar").animate({"margin-top": origMargin}, 100);
+        $(".navbar-brand").animate({top: origTop}, 100);
+        $(".navbar-brand img").animate({width: origWidth}, 100);
+        happened = false;
+      }
 
       if (!clicked) {
         if (pos < 100); {

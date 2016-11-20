@@ -12,11 +12,16 @@
   padding: 0;
   height: $jumbo-height;
   overflow: hidden;
-  box-shadow: $jumbo-shadow;
+  border-radius: 3px;
+  box-shadow: $nav-shadow;
 }
 
 .panorama {
   .pv-inner {
+    height: $jumbo-height;
+  }
+
+  img {
     height: $jumbo-height;
   }
 }

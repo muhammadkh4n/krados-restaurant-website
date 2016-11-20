@@ -2,6 +2,10 @@ footer {
   font-size: 0.8em;
 
   .navbar-default {
+    border-bottom: 0;
+    border-top: 3px solid $navlinks-color;
+    box-shadow: none;
+
     .navbar-text {
       color: $white;
       margin-left: 0;

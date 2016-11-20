@@ -85,3 +85,14 @@ $ ->
     html = $(this).parent().html()
     image_html.html(html)
     image_modal.modal('show')
+
+  $("li.dropdown").mouseleave ->
+    $(".navbar-nav li a").blur()
+
+  # ADD SLIDEDOWN ANIMATION TO DROPDOWN //
+  $('.dropdown').on 'show.bs.dropdown', ->
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200)
+
+  # ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on 'hide.bs.dropdown', ->
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200)
