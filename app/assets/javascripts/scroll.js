@@ -87,9 +87,9 @@ $(document).ready(function() {
         $(".navbar-brand img").animate({width: "110px"}, 200);
         happened = true;
       } else if (happened && pos <= margin) {
-        $("#main-navbar").animate({"margin-top": origMargin}, 100);
-        $(".navbar-brand").animate({top: origTop}, 100);
-        $(".navbar-brand img").animate({width: origWidth}, 100);
+        $("#main-navbar").animate({"margin-top": origMargin}, 200);
+        $(".navbar-brand").animate({top: origTop}, 200);
+        $(".navbar-brand img").animate({width: origWidth}, 200);
         happened = false;
       }
 
