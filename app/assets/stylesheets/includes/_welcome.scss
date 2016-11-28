@@ -1,11 +1,14 @@
 //------------------ WELCOME SECTION--------------------------
 #welcome {
   padding-top: $welcome-pad;
+  padding-bottom: 50px;
   text-align: inherit;
 }
 
 #welcome h1 {
   font-size: $welcome-font-size;
+  position: relative;
+  color: rgb(38, 38, 38);
 }
 
 .container .jumbotron {
@@ -14,6 +17,7 @@
   overflow: hidden;
   border-radius: 3px;
   box-shadow: $nav-shadow;
+  margin-bottom: 10px;
 }
 
 .panorama {
