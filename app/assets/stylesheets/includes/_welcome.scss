@@ -8,14 +8,14 @@
 #welcome h1 {
   font-size: $welcome-font-size;
   position: relative;
-  color: rgb(38, 38, 38);
+  text-shadow: 1px 1px 7px $body-bg;
 }
 
 .container .jumbotron {
   padding: 0;
   height: $jumbo-height;
   overflow: hidden;
-  border-radius: 3px;
+  border-radius: 0px;
   box-shadow: $nav-shadow;
   margin-bottom: 10px;
 }
@@ -23,6 +23,10 @@
 .panorama {
   .pv-inner {
     height: $jumbo-height;
+
+    .pv-overlay {
+      background: rgba(0, 0, 0, 0.1);
+    }
   }
 
   img {

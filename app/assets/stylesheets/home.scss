@@ -10,6 +10,11 @@
 //------------------------------------------------
 html, body {
   height: 100%;
+  font-family: Helvetica, Arial, sans-serif;
+
+  h1, .nav > li > a {
+    font-variant: small-caps;
+  }
 }
 
 .home-page {
