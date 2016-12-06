@@ -23,19 +23,20 @@ html, body {
 
   img#bg1, img#bg2 {
     position: fixed;
-    opacity: 0.5;
+    opacity: 0.7;
   }
 
   #bg1 {
     width: 800px;
-    top: 0%;
+    height: 530px;
+    top: 5%;
     left: -400px;
   }
 
   #bg2 {
     width: 500px;
     right: -100px;
-    top: 60%;
+    bottom: 0;
   }
 }
 
