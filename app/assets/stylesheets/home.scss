@@ -171,14 +171,16 @@ html, body {
 
   .home-page {
     #bg1 {
-      width: 550px;
-      height: 300px;
-      left: -300px;
+     // width: 550px;
+     // height: 300px;
+     // left: -300px;
+     display: none;
     }
 
     #bg2 {
-      width: 400px;
-      right: -150px;
+     // width: 400px;
+     // right: -150px;
+     display: none;
     }
   }
 
