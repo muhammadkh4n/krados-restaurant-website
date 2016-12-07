@@ -60,13 +60,14 @@
   }
 
   h3 > i.price-line {
-    height: 2px;
+    //height: 2px;
     width: 90%;
-    background-color: $light-black;
+    //background-color: $light-black;
     position: absolute;
     left: 10px;
     top: 12px;
     z-index: 0;
+    border-top: $light-black
   }
 
   h3 > span.dish-price {
