@@ -60,7 +60,7 @@
   }
 
   h3 > i.price-line {
-    height: 1px;
+    height: 2px;
     width: 90%;
     background-color: $light-black;
     position: absolute;
@@ -72,7 +72,7 @@
   h3 > span.dish-price {
     position: absolute;
     right: 5px;
-    top: 2px;
+    top: 3px;
     color: $nav-bg;
     background-color: $textbox-bg;
     padding-right: 0;
