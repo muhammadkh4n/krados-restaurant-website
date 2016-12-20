@@ -70,11 +70,12 @@ $ ->
   })
 
 
-  if window.innerWidth >= 768
-    AOS.init()
-    setTimeout ->
-      AOS.refresh()
-    , 300
+
+  AOS.init
+    disable: 'mobile'
+  setTimeout ->
+    AOS.refresh()
+  , 300
 
   $(".panorama").panorama_viewer
     repeat: false,              # The image will repeat when the user scroll reach the bounding box. The default value is false.
