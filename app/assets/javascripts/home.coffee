@@ -70,8 +70,8 @@ $ ->
   })
 
 
-  AOS.init
-    disable: 'mobile'
+  AOS.init()
+    # disable: 'mobile'
 
   $(".panorama").panorama_viewer
     repeat: false,              # The image will repeat when the user scroll reach the bounding box. The default value is false.
