@@ -70,9 +70,8 @@ $ ->
   })
 
 
-  AOS.init
-    disable: window.innerWidth < 768
-    # disable: 'mobile'
+  if window.innerWidth >= 768
+    AOS.init()
 
   $(".panorama").panorama_viewer
     repeat: false,              # The image will repeat when the user scroll reach the bounding box. The default value is false.
@@ -101,5 +100,3 @@ $ ->
   # ADD SLIDEUP ANIMATION TO DROPDOWN //
   $('.dropdown').on 'hide.bs.dropdown', ->
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200)
-
-  AOS.refresh()
