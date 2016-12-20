@@ -70,7 +70,8 @@ $ ->
   })
 
 
-  AOS.init()
+  AOS.init
+    disable: window.innerWidth < 768
     # disable: 'mobile'
 
   $(".panorama").panorama_viewer
