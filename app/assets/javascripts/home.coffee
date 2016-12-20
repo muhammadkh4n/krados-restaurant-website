@@ -101,3 +101,5 @@ $ ->
   # ADD SLIDEUP ANIMATION TO DROPDOWN //
   $('.dropdown').on 'hide.bs.dropdown', ->
     $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200)
+
+  AOS.refresh()
