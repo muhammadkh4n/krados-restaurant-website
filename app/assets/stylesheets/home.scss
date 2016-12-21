@@ -58,6 +58,11 @@ body {
   position: relative;
   p {
     padding: $textbox-pad;
+    padding-bottom: 5px;
+    margin: 0;
+  }
+  p:last-child {
+    padding-bottom: 25px;
   }
 }
 
