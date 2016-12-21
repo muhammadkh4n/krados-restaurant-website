@@ -11,10 +11,11 @@
     font-size: $tab-font-size;
 
     li {
-      width: $nav-tab-width;
+      // width: $nav-tab-width;
       background-color: $nav-bg;
       margin-right: 3px;
       box-shadow: $nav-shadow;
+      margin-top: 5px;
     }
 
     li a {

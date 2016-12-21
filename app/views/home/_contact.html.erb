@@ -59,14 +59,28 @@
             <%= f.submit 'Send', class: "btn btn-default btn-lg pull-left" %>
           <% end %>
         </div>
-        <div class="col-xs-12 col-md-6" id="address" data-aos="fade-left" data-aos-delay="250">
-          <p id="phone">Ph: <%= @pages["phone"] ? @pages["phone"].text : "" %></p>
-          <p id="email">Email: <%= @pages["email"] ? @pages["email"].text : "" %></p>
-          <h3>Address:</h3>
-          <address class="">
-            <%= @pages["address"] ? @pages["address"].text : "" %>
-          </address>
-          <p><%= @pages["info"] ? @pages["info"].text : "" %></p>
+        <div class="col-xs-12 col-md-6" id="contact-details" data-aos="fade-left" data-aos-delay="250">
+          <div id="phone">
+            <h3>Phone:</h3>
+            <% if @pages["phone"] %>
+              <% @pages["phone"].text.split(/\s{4}/).each do |phone| %>
+                <p><%= phone %></p>
+              <% end %>
+            <% end %>
+          </div>
+          <div id="email">
+            <h3>Email:</h3>
+            <p><%= @pages["email"] ? @pages["email"].text : "" %></p>
+          </div>
+          <div id="address">
+            <h3>Address:</h3>
+            <address class="">
+              <%= @pages["address"] ? @pages["address"].text : "" %>
+            </address>
+          </div>
+          <div id="contact-info">
+            <p><%= @pages["info"] ? @pages["info"].text : "" %></p>
+          </div>
         </div>
       </div>
     </div>

@@ -3,9 +3,9 @@
   <% if @pages["about"] %>
     <div class="col-xs-12">
       <div class="text-box" data-aos="zoom-in">
-        <p>
-          <%= @pages["about"].text %>
-        </p>
+        <% @pages["about"].text.split(/\s{4}/).each do |about| %>
+          <p><%= about %></p>
+        <% end %>
       </div>
     </div>
     <div class="col-xs-12">

@@ -5,9 +5,9 @@
       <div class="text-box" data-aos="fade-right">
         <div class="row">
           <div class="col-xs-12 col-md-6">
-              <p>
-                <%= @pages["mission"].text %>
-              </p>
+            <% @pages["mission"].text.split(/\s{4}/).each do |mission| %>
+              <p><%= mission %></p>
+            <% end %>
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="main-image image" data-aos="fade-left" data-aos-delay="200">

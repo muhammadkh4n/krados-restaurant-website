@@ -8,11 +8,13 @@
 //------------------------------------------------
 //            BASE STYLES
 //------------------------------------------------
-html, body {
-  height: 100%;
+html,
+body {
   font-family: Helvetica, Arial, sans-serif;
+  height: 100%;
 
-  h1, .nav > li > a {
+  h1,
+  .nav > li > a {
     font-variant: small-caps;
   }
 }
@@ -271,9 +273,29 @@ html, body {
     width: 100%;
   }
 
+  // combined
+  #mission p, #about p {
+    font-size: 0.8em;
+  }
+
   // menu
   #menu .nav.nav-tabs {
-    font-size: 1.2em
+    font-size: 1.2em;
+  }
+
+  #menu {
+    h3 {
+      font-size: 1.3em;
+    }
+    h3 > i.price-line {
+      top: 9px;
+    }
+    h3 > span.dish-price {
+      top: 2px;
+    }
+    p {
+      font-size: 0.9em;
+    }
   }
 
   // FOOTER
@@ -287,8 +309,8 @@ html, body {
 
 
 // xxs devices
-@media (max-width: 436px) {
+@media (max-width: 600px) {
   #menu .nav.nav-tabs li {
-    width: 150px;
+    width: 100%;
   }
 }
