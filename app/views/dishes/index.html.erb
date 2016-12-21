@@ -12,7 +12,7 @@
           <tr>
             <th>Name</th>
             <th>Price</th>
-            <th>Description</th>
+            <!-- <th>Description</th> -->
             <th>Image</th>
             <th>Special</th>
             <th>Category</th>
@@ -26,7 +26,7 @@
             <tr>
               <td><%= dish.name %></td>
               <td><%= dish.price %></td>
-              <td><%= dish.description %></td>
+              <!-- <td><%= dish.description %></td> -->
               <td>
                 <% if dish.image.file %>
                 <%= image_tag(dish.image_url, size: "50x50", alt: "Dish Photo", class: "img-thumbnail") %>
