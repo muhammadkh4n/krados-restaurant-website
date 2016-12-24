@@ -27,9 +27,12 @@
                 <i id="menu-icon"></i> Menu <span class="caret"></span>
             </a>
         		<ul class="dropdown-menu" role="menu" id="menu-tabs">
-              <li><a href="#menu" id="krados-tab">Krados</a></li>
-              <li class="divider"></li>
-              <li><a href="#menu" id="krados-grill-tab">Krados Grill</a></li>
+              <% @branches.each_with_index do |(branch, cat), i| %>
+                <li><a href="#<%= hyphenate(branch) %>" data-toggle="tab"><%= branch %></a></li>
+                <% if i < @branches.length - 1 %>
+                <li class="divider"></li>
+                <% end %>
+              <% end %>
             </ul>
           </li>
           <li id="contact-a"><a href="#contact" class="main-link"><i id="contact-icon"></i> Contact Us</a></li>

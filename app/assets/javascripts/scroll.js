@@ -56,42 +56,17 @@ $(document).ready(function() {
       scrolltoSection(this, getPosition(menu) - 100, e);
     });
 
-    $("#krados-tab").click(function(e){
+    $("#menu-tabs a[data-toggle='tab']").click(function(e){
       e.preventDefault();
-      $("#krados").addClass("active");
-      $("#krados-grill").removeClass("active");
-      $(".nav-tabs a[href='#krados']").parent().addClass("active");
-      $(".nav-tabs a[href='#krados-grill']").parent().removeClass("active");
+      var id = $(this).attr("href");
+      $(".tab-pane").removeClass("in active");
+      $(id).addClass("in active");
+      $(".nav-tabs li").removeClass("active");
+      $(".nav-tabs a[href='" + id + "']").parent().addClass("active");
     });
-
-    $("#krados-grill-tab").click(function(e){
-      e.preventDefault();
-      $("#krados-grill").addClass("active");
-      $("#krados").removeClass("active");
-      $(".nav-tabs a[href='#krados-grill']").parent().addClass("active");
-      $(".nav-tabs a[href='#krados']").parent().removeClass("active");
-    });
-
-    // var origMargin = $("#main-navbar").css("margin-top");
-    // var origTop = $(".navbar-brand").css("top");
-    // var origWidth = $(".navbar-brand img").css("width");
-    // var margin = parseInt(origMargin);
-    // var happened = false;
 
     $(window).on('scroll', function() {
       var pos = $(this).scrollTop();
-
-      // if (pos >= margin && !happened) {
-      //   $("#main-navbar").animate({"margin-top": "0px"}, 200);
-      //   $(".navbar-brand").animate({top: "-15px"}, 200);
-      //   $(".navbar-brand img").animate({width: "110px"}, 200);
-      //   happened = true;
-      // } else if (happened && pos <= margin) {
-      //   $("#main-navbar").animate({"margin-top": origMargin}, 200);
-      //   $(".navbar-brand").animate({top: origTop}, 200);
-      //   $(".navbar-brand img").animate({width: origWidth}, 200);
-      //   happened = false;
-      // }
 
       if (!clicked) {
         if (pos < 100); {

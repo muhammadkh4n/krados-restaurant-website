@@ -11,7 +11,7 @@
     <div class="tab-content" data-aos="zoom-in-up" data-aos-delay="250">
 
       <% @branches.each_with_index do |(branch, categories), i| %>
-        <div role="tabpanel" class="tab-pane <%= i==0 ? 'active' : '' %>" id="<%= hyphenate(branch) %>">
+        <div role="tabpanel" class="tab-pane fade <%= i==0 ? 'in active' : '' %>" id="<%= hyphenate(branch) %>">
           <% categories.each do |category, dishes| %>
             <h2 class="category" id='<%= "#{hyphenate(branch)}-#{hyphenate(category)}" %>'><%= category %></h2>
             <div class="row">
