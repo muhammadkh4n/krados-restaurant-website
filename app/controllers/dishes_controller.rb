@@ -73,6 +73,6 @@ class DishesController < BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dish_params
-      params.require(:dish).permit(:name, :price, :description, :image, :special, :category_id, :branch_id)
+      params.require(:dish).permit(:name, :price, :description, :image, :special, :show_description, :category_id, :branch_id)
     end
 end

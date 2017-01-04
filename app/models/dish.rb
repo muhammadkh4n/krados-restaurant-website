@@ -10,6 +10,7 @@ class Dish < ActiveRecord::Base
   def special_dish
     if self.special == true
       validates_presence_of :image
+      validates_presence_of :description
     end
   end
 

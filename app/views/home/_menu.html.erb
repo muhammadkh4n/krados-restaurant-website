@@ -18,9 +18,11 @@
               <% dishes.each do |dish| %>
                 <div class="col-xs-12 col-sm-6">
                   <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
-                  <p>
-                    <%= dish.description %>
-                  </p>
+                  <% if dish.show_description %>
+                    <p>
+                      <%= dish.description %>
+                    </p>
+                  <% end %>
                 </div>
               <% end %>
             </div>

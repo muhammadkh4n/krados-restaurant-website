@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161029114116) do
+ActiveRecord::Schema.define(version: 20170104060248) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "username"
@@ -37,11 +37,12 @@ ActiveRecord::Schema.define(version: 20161029114116) do
     t.integer  "price"
     t.text     "description"
     t.string   "image"
-    t.boolean  "special",     default: false
+    t.boolean  "special",          default: false
     t.integer  "category_id"
     t.integer  "branch_id"
-    t.datetime "created_at",                  null: false
-    t.datetime "updated_at",                  null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.boolean  "show_description", default: true
   end
 
   add_index "dishes", ["branch_id"], name: "index_dishes_on_branch_id"

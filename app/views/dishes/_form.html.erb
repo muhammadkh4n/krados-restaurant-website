@@ -38,6 +38,10 @@
     <%= f.check_box :special %>
   </div>
   <div class="field">
+    <%= f.label :show_description %><br>
+    <%= f.check_box :show_description %>
+  </div>
+  <div class="field">
     <%= f.label :category %><br>
     <%= f.select :category_id, Category.all.collect { |c| [c.name, c.id] }, { include_blank: true }, class: "form-control" %>
   </div>
