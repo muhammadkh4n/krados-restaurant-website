@@ -1,8 +1,8 @@
 <div class="section row" id="specials">
   <h1 class="col-xs-12" data-aos="zoom-in-down">Specials</h1>
-  <p class="col-xs-12 desc" data-aos="zoom-in-down">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima libero nam, dignissimos reprehenderit vel atque ea. Necessitatibus neque a aliquam eos soluta quam, quisquam molestiae fuga dolor quo, ad eveniet.
-  </p>
+  <% @pages["specials_note"].text.split(/\s{4}/).each do |note| %>
+    <p class="col-xs-12 desc" data-aos="zoom-in-down"><%= note %></p>
+  <% end %>
   <div class="slider col-xs-12">
     <ul id="specials-slider">
       <% @specials.each_with_index do |special, i| %>
