@@ -33,11 +33,11 @@
     <p class="help-block">Current Image: <%= @dish.image.file.filename %> <%= image_tag(@dish.image_url, width: "70", class: "img-thumbnail") %></p>
     <% end %>
   </div>
-  <div class="field">
+  <div class="field checkboxes slideThree">
     <%= f.label :special %><br>
     <%= f.check_box :special %>
   </div>
-  <div class="field">
+  <div class="field checkboxes slideThree">
     <%= f.label :show_description %><br>
     <%= f.check_box :show_description %>
   </div>
