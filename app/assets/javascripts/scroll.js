@@ -63,7 +63,10 @@ $(document).ready(function() {
       $(id).addClass("in active");
       $(".nav-tabs li").removeClass("active");
       $(".nav-tabs a[href='" + id + "']").parent().addClass("active");
-      AOS.refresh();
+
+      setTimeout(function () {
+        AOS.refresh();
+      }, 500);
     });
 
     $(window).on('scroll', function() {
