@@ -1,6 +1,6 @@
 <div id="mission" class="row section">
   <h1 class="col-xs-12" data-aos="zoom-in-down">Gallery</h1>
-  <% if @pages["mission"] %>
+  <% if @pages["gallery"] %>
     <!-- <div class="col-xs-12">
       <div class="text-box" data-aos="fade-right">
         <div class="row">
@@ -19,7 +19,7 @@
     </div> -->
     <div class="col-xs-12">
       <div class="row">
-        <% @pages["mission"].images.each_with_index do |image, i| %>
+        <% @pages["gallery"].images.each_with_index do |image, i| %>
           <div class="col-xs-6 col-md-3 image" data-aos="zoom-in" data-aos-delay="<%= ((i+1) * 50) %>">
             <%= image_tag(image, class: "img-responsive") %>
           </div>
