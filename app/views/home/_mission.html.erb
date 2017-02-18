@@ -1,22 +1,6 @@
 <div id="mission" class="row section">
   <h1 class="col-xs-12" data-aos="zoom-in-down">Gallery</h1>
   <% if @pages["gallery"] %>
-    <!-- <div class="col-xs-12">
-      <div class="text-box" data-aos="fade-right">
-        <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <% @pages["mission"].text.split(/\s{4}/).each do |mission| %>
-              <p><%= mission %></p>
-            <% end %>
-          </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="main-image image" data-aos="fade-left" data-aos-delay="200">
-              <%= image_tag @pages["mission"].images.first, class: "img-responsive" %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="col-xs-12">
       <div class="row">
         <% @pages["gallery"].images.each_with_index do |image, i| %>
