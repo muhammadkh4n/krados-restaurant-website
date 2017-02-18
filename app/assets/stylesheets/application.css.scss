@@ -14,10 +14,9 @@
  *= require lightslider
  *= require admin_panel
  *= require panorama_viewer
+ *= require font-awesome
  *= require aos
  *= require home
  */
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
-// $fa-font-path: 'fontawesome/fonts';
-@import 'fontawesome';
