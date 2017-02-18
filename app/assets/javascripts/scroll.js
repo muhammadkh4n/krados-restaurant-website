@@ -64,9 +64,11 @@ $(document).ready(function() {
       $(".nav-tabs li").removeClass("active");
       $(".nav-tabs a[href='" + id + "']").parent().addClass("active");
 
-      setTimeout(function () {
-        AOS.refresh();
-      }, 500);
+      AOS.refresh();
+    });
+
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+      AOS.refresh();
     });
 
     $(window).on('scroll', function() {
