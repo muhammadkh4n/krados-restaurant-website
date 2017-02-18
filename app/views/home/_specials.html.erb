@@ -1,7 +1,9 @@
 <div class="section row" id="specials">
   <h1 class="col-xs-12" data-aos="zoom-in-down">Specials</h1>
-  <% @pages["specials_note"].text.split(/\s{4}/).each do |note| %>
-    <p class="col-xs-12 desc" data-aos="zoom-in-down"><%= note %></p>
+  <% if @pages["specials_note"] %>
+    <% @pages["specials_note"].text.split(/\s{4}/).each do |note| %>
+      <p class="col-xs-12 desc" data-aos="zoom-in-down"><%= note %></p>
+    <% end %>
   <% end %>
   <div class="slider col-xs-12">
     <ul id="specials-slider">

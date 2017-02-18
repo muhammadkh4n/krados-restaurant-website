@@ -64,18 +64,22 @@
             <h3>Phone:</h3>
             <% if @pages["phone"] %>
               <% @pages["phone"].text.split(/\s{4}/).each do |phone| %>
-                <p><%= phone %></p>
+                <p><i class="fa fa-phone"></i> <%= phone %></p>
               <% end %>
             <% end %>
           </div>
           <div id="email">
             <h3>Email:</h3>
-            <p><%= @pages["email"] ? @pages["email"].text : "" %></p>
+            <p><i class="fa fa-envelope"></i> <%= @pages["email"] ? @pages["email"].text : "" %></p>
           </div>
           <div id="address">
             <h3>Address:</h3>
-            <address class="">
-              <%= @pages["address"] ? @pages["address"].text : "" %>
+            <address>
+              <% if @pages["address"] %>
+                <% @pages["address"].text.split(/\s{4}/).each do |address| %>
+                  <p class="col-xs-12 desc" data-aos="zoom-in-down"><i class="fa fa-map-marker"></i> <%= address %></p>
+                <% end %>
+              <% end %>
             </address>
           </div>
           <div id="contact-info">

@@ -55,3 +55,4 @@ gem 'rmagick'
 gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'bootstrap-sass'
 gem 'pointless_feedback'
+gem 'rails-assets-fontawesome', source: 'https://rails-assets.org'
