@@ -64,13 +64,15 @@
             <h3>Phone:</h3>
             <% if @pages["phone"] %>
               <% @pages["phone"].text.split(/\s{4}/).each do |phone| %>
-                <p><i class="fa fa-phone"></i> <%= phone %></p>
+                <p><i class="fa fa-phone"></i> <a href="tel:<%= phone %>"><%= phone %></a></p>
               <% end %>
             <% end %>
           </div>
           <div id="email">
             <h3>Email:</h3>
-            <p><i class="fa fa-envelope"></i> <%= @pages["email"] ? @pages["email"].text : "" %></p>
+            <% if @pages["email"] %>
+              <p><i class="fa fa-envelope"></i> <a href="mailto:<%= @pages["email"].text %>"><%= @pages["email"].text %></a></p>
+            <% end %>
           </div>
           <div id="address">
             <h3>Address:</h3>
