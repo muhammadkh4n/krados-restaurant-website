@@ -4,7 +4,7 @@ class Branch < ActiveRecord::Base
 
   # Put all branches in a hash and group their dishes by category
   def self.group_dishes_by_category
-    branches = all
+    branches = order(:id)
     res = {}
     if branches
       branches.each do |branch|

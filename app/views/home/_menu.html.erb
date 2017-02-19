@@ -18,7 +18,7 @@
               <% dishes.each do |dish| %>
                 <div class="col-xs-12 col-sm-6">
                   <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
-                  <% if dish.show_description && dish.description %>
+                  <% if dish.show_description && dish.description && !dish.description.empty? %>
                     <p>
                       <%= dish.description %>
                     </p>
