@@ -44,13 +44,14 @@
 
     h2 {
       text-align: center;
-      padding-bottom: $menu-cat-pad;
+      // padding-bottom: $menu-cat-pad;
     }
   }
 
   h3 {
     position: relative;
     height: 25px;
+    font-size: 1.3em;
   }
 
   h3 > span.dish-name {
@@ -58,6 +59,7 @@
     position: absolute;
     z-index: 99;
     padding-right: 15px;
+    max-width: 70%;
   }
 
   h3 > i.price-line {
