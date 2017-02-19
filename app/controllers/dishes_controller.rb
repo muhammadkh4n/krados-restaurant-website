@@ -4,7 +4,7 @@ class DishesController < BaseController
   # GET /dishes
   # GET /dishes.json
   def index
-    @dishes = Dish.order(:branch_id)
+    @dishes = Dish.order(:created_at)
   end
 
   # GET /dishes/1
