@@ -44,7 +44,9 @@
 
     h2 {
       text-align: center;
-      // padding-bottom: $menu-cat-pad;
+      font-family: 'Niconne', cursive;
+      font-size: 2.8em;
+      padding: 10px 0;
     }
   }
 
@@ -52,6 +54,7 @@
     position: relative;
     height: 25px;
     font-size: 1.3em;
+    color: rgba(74, 63, 63, 0.8);
   }
 
   h3 > span.dish-name {
@@ -70,17 +73,18 @@
     left: 10px;
     top: 12px;
     z-index: 0;
-    border-top: 1px solid $light-black;
+    border-top: 1px solid rgba($light-black, 0.3);
   }
 
   h3 > span.dish-price {
     position: absolute;
     right: 5px;
     top: 3px;
-    color: $nav-bg;
+    color: rgba($nav-bg, 0.6);
     background-color: $textbox-bg;
     padding-right: 0;
     font-size: $price-font-size;
+    font-weight: bold;
     padding-left: 15px;
   }
 
