@@ -51,11 +51,14 @@ button#menu-record {
     padding-bottom: $menu-cat-pad;
     font-size: 2.2em;
     font-weight: bold;
+    font-family: 'Niconne', cursive;
   }
 
   h3 {
     position: relative;
     height: 45px;
+    font-size: 1.7em;
+    color: rgba(74, 63, 63, 0.9);
   }
 
   h3 > span.dish-name {
@@ -63,28 +66,25 @@ button#menu-record {
     position: absolute;
     z-index: 99;
     padding-right: 15px;
-    font-size: 2em;
+    max-width: 80%;
   }
 
   h3 > i.price-line {
-    height: 1px;
     width: 90%;
-    background-color: $light-black;
     position: absolute;
     left: 10px;
-    top: 26px;
+    top: 16px;
     z-index: 0;
+    border-top: 1px solid rgba($light-black, 0.3)
   }
 
   h3 > span.dish-price {
     position: absolute;
     right: 0px;
-    top: 4px;
-    color: $nav-bg;
     background-color: $textbox-bg;
     padding-right: 0;
-    font-size: 1.8em;
     padding-left: 15px;
+    color: rgba($nav-bg, 0.8);
   }
 
   p {
