@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :page %><br>
+    <%= f.select :page, Page::PAGES.map { |p| [p, p] }, { include_blank: true }, class: "form-control" %>
+  </div>
   <div class="field form-group">
     <%= f.label :title %><br>
     <%= f.text_field :title, class: "form-control" %>

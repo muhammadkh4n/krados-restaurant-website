@@ -1,14 +1,14 @@
 class Page < ActiveRecord::Base
+  PAGES = %w(main_top main_bottom specials about gallery menu contact_us phone email address info)
   #serialize :images
   mount_uploaders :images, PageImagesUploader
-  validates :title, presence: true, uniqueness: { case_sensitive: false }
-  validates :text, presence: true
+  validates :page, presence: true, uniqueness: { case_sensitive: false }
 
   # All pages in a hash
   def self.pages
     pages = {}
     Page.all.each do |page|
-      pages[page.title] = page
+      pages[page.page] = page
     end
     pages
   end

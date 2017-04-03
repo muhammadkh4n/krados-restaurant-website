@@ -73,6 +73,6 @@ class PagesController < BaseController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:title, :text, { images: [] })
+      params.require(:page).permit(:page, :title, :text, { images: [] })
     end
 end

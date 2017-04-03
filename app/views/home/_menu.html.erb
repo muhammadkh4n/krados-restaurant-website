@@ -1,35 +1,37 @@
-<div id="menu" class="row section">
-  <h1 class="col-xs-12" data-aos="zoom-in-down">Menu</h1>
-  <div class="col-xs-12">
-    <ul class="nav nav-tabs" role="tablist" data-aos="zoom-in-down">
-      <% @branches.each_with_index do |(branch, cat), i| %>
-        <li role="presentation" class="<%= i==0 ? 'active' : '' %>"><a href="#<%= hyphenate(branch) %>" role="tab" data-toggle="tab"><%= branch %></a></li>
-      <% end %>
-    </ul>
+<% if @pages["menu"] %>
+  <div id="menu" class="row section">
+    <h1 class="col-xs-12" data-aos="zoom-in-down"><%= @pages["menu"].title || 'Menu' %></h1>
+    <div class="col-xs-12">
+      <ul class="nav nav-tabs" role="tablist" data-aos="zoom-in-down">
+        <% @branches.each_with_index do |(branch, cat), i| %>
+          <li role="presentation" class="<%= i==0 ? 'active' : '' %>"><a href="#<%= hyphenate(branch) %>" role="tab" data-toggle="tab"><%= branch %></a></li>
+        <% end %>
+      </ul>
 
-    <!-- Tab panes -->
-    <div class="tab-content" data-aos="zoom-in-up" data-aos-delay="250">
+      <!-- Tab panes -->
+      <div class="tab-content" data-aos="zoom-in-up" data-aos-delay="250">
 
-      <% @branches.each_with_index do |(branch, categories), i| %>
-        <div role="tabpanel" class="tab-pane fade <%= i==0 ? 'in active' : '' %>" id="<%= hyphenate(branch) %>">
-          <% categories.each do |category, dishes| %>
-            <h2 class="category" id='<%= "#{hyphenate(branch)}-#{hyphenate(category)}" %>'><%= category %></h2>
-            <div class="row">
-              <% dishes.each do |dish| %>
-                <div class="col-xs-12 col-sm-6">
-                  <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
-                  <% if dish.show_description && dish.description && !dish.description.empty? %>
-                    <p>
-                      <%= dish.description %>
-                    </p>
-                  <% end %>
-                </div>
-              <% end %>
-            </div>
-          <% end %>
-        </div>
-      <% end %>
+        <% @branches.each_with_index do |(branch, categories), i| %>
+          <div role="tabpanel" class="tab-pane fade <%= i==0 ? 'in active' : '' %>" id="<%= hyphenate(branch) %>">
+            <% categories.each do |category, dishes| %>
+              <h2 class="category" id='<%= "#{hyphenate(branch)}-#{hyphenate(category)}" %>'><%= category %></h2>
+              <div class="row">
+                <% dishes.each do |dish| %>
+                  <div class="col-xs-12 col-sm-6">
+                    <h3><span class="dish-name"><%= dish.name %></span><i class="price-line"></i><span class="dish-price">Rs. <%= dish.price %></span></h3>
+                    <% if dish.show_description && dish.description && !dish.description.empty? %>
+                      <p>
+                        <%= dish.description %>
+                      </p>
+                    <% end %>
+                  </div>
+                <% end %>
+              </div>
+            <% end %>
+          </div>
+        <% end %>
 
+      </div>
     </div>
   </div>
-</div>
+<% end %>

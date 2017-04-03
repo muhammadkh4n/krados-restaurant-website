@@ -10,6 +10,7 @@
       <table class="table table-bordered table-striped">
         <thead>
           <tr>
+            <th>Page</th>
             <th>Title</th>
             <th>Text</th>
             <th>Images</th>
@@ -20,6 +21,7 @@
         <tbody>
           <% @pages.each do |page| %>
             <tr>
+              <td><%= page.page %></td>
               <td><%= page.title %></td>
               <td><%= page.text %></td>
               <td>

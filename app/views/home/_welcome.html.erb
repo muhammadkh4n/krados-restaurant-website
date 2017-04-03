@@ -2,17 +2,25 @@
   <% if notice %>
     <p id="notice" class="alert alert-success"><%= notice %></p>
   <% end %>
-  <h1 class="">Krados</h1>
-  <div class="jumbotron" data-aos="fade-right">
-    <div id="krados-front" class="panorama">
-      <%= image_tag 'krados.png' %>
+  <% if @pages["main_top"] %>
+    <h1 class=""><%= @pages["main_top"].title || "Krados" %></h1>
+    <div class="jumbotron" data-aos="fade-right">
+      <div id="krados-front" class="panorama">
+        <% if @pages["main_top"].images %>
+          <%= image_tag @pages["main_top"].images.first %>
+        <% end %>
+      </div>
     </div>
-  </div>
-  <h1 class="pull-right">Family Dining</h1>
-  <div class="clearfix"></div>
-  <div class="jumbotron" data-aos="fade-left" data-aos-delay="250">
-    <div id="krados-dining" class="panorama">
-      <%= image_tag 'family.png' %>
+  <% end %>
+  <% if @pages["main_bottom"] %>
+    <h1 class="pull-right"><%= @pages["main_bottom"].title || "Family Dining" %></h1>
+    <div class="clearfix"></div>
+    <div class="jumbotron" data-aos="fade-left" data-aos-delay="250">
+      <div id="krados-dining" class="panorama">
+        <% if @pages["main_bottom"].images %>
+          <%= image_tag @pages["main_bottom"].images.first %>
+        <% end %>
+      </div>
     </div>
-  </div>
+  <% end %>
 </div>

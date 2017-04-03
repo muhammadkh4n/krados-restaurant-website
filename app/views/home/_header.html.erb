@@ -16,15 +16,15 @@
       <div class="collapse navbar-collapse text-center" id="main-nav">
         <ul class="nav navbar-nav">
           <li class="dropdown" id="about-a">
-            <a href="#about" class="dropdown-toggle main-link" data-toggle="dropdown" role="button" data-target="#"><i id="about-icon"></i> About Us <span class="caret"></span></a>
+            <a href="#about" class="dropdown-toggle main-link" data-toggle="dropdown" role="button" data-target="#"><i id="about-icon"></i> <%= @pages["about"] ? @pages["about"].title : 'About Us' %> <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li id="mission-a"><a href="#gallery" data-target="#" role="button">Gallery</a></li>
+              <li id="mission-a"><a href="#gallery" data-target="#" role="button"><%= @pages["gallery"] ? @pages["gallery"].title : 'Gallery' %></a></li>
             </ul>
           </li>
-          <li id="specials-a"><a href="#specials" class="main-link"><i id="specials-icon"></i> Specials</a></li>
+          <li id="specials-a"><a href="#specials" class="main-link"><i id="specials-icon"></i> <%= @pages["specials"] ? @pages["specials"].title : 'Specials' %></a></li>
           <li class="dropdown" id="menu-a">
             <a role="button" data-toggle="dropdown" href="#menu" class="dropdown-toggle main-link" data-target="#">
-                <i id="menu-icon"></i> Menu <span class="caret"></span>
+              <i id="menu-icon"></i> <%= @pages["menu"] ? @pages["menu"].title : 'Menu' %> <span class="caret"></span>
             </a>
         		<ul class="dropdown-menu" role="menu" id="menu-tabs">
               <% @branches.each_with_index do |(branch, cat), i| %>
@@ -35,7 +35,7 @@
               <% end %>
             </ul>
           </li>
-          <li id="contact-a"><a href="#contact" class="main-link"><i id="contact-icon"></i> Contact Us</a></li>
+          <li id="contact-a"><a href="#contact" class="main-link"><i id="contact-icon"></i> <%= @pages["contact_us"] ? @pages["contact_us"].title : 'Contact Us' %></a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container -->
