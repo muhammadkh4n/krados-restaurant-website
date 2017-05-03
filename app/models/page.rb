@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-  PAGES = %w(main_top main_bottom specials about gallery menu contact_us phone email address info)
+  PAGES = %w(main_top main_bottom specials about gallery menu contact_us phone email address info map)
   #serialize :images
   mount_uploaders :images, PageImagesUploader
   validates :page, presence: true, uniqueness: { case_sensitive: false }
