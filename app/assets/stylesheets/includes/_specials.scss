@@ -14,24 +14,31 @@
     padding: $slide-pad;
     height: $slide-height;
     position: relative;
-    width: 100%
+    width: 100%;
+    color: $navlinks-color;
   }
 
   .slide .dish {
-    position: relative;
-    top: 15%;
-    height: 150px;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    right: 20px;
 
     img {
+      position: relative;
       width: 100%;
-      overflow: hidden;
+      transform: translateY(-50%);
+      border: 3px solid $navlinks-color;
+      border-radius: 3px;
     }
   }
 
   .slide p {
     font-size: $spec-dish-font-size;
-    position: relative;
-    padding: 60% 0;
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    right: 20px;
   }
 
   .lSSlideOuter .lSPager.lSpg {

@@ -284,6 +284,15 @@ body {
     font-size: 0.8em;
   }
 
+  //--------------------------
+  //   SPECIALS
+  //--------------------------
+  #specials {
+    .slide {
+      height: $slide-height - 80px;
+    }
+  }
+
   // menu
   #menu .nav.nav-tabs {
     font-size: 1.2em;

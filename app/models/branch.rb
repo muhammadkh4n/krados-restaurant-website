@@ -4,12 +4,12 @@ class Branch < ActiveRecord::Base
 
   # Put all branches in a hash and group their dishes by category
   def self.group_dishes_by_category
-    branches = order('created_at')
+    branches = all
     res = {}
     if branches
       branches.each do |branch|
         res[branch.name] = {}
-        branch.dishes.each do |dish|
+        branch.dishes.order(:created_at).each do |dish|
           if res[branch.name][dish.category_name].nil?
             res[branch.name][dish.category_name] = [dish]
           else
@@ -24,7 +24,7 @@ class Branch < ActiveRecord::Base
   # Get branch menu
   def group_dishes_by_category
     res = {}
-    self.dishes.each do |dish|
+    self.dishes.order(:created_at).each do |dish|
       if res[dish.category_name].nil?
         res[dish.category_name] = [dish]
       else

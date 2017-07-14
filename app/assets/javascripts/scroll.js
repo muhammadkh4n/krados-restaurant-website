@@ -6,6 +6,9 @@ $(document).ready(function() {
     var specials = $("#specials");
     var contact = $("#contact");
     var menu = $("#menu");
+    var offsetTop = 200;
+    var offsetBottom = 50;
+    var clickOffset = 100;
 
     var links = $(".nav.navbar-nav li");
 
@@ -36,24 +39,24 @@ $(document).ready(function() {
     });
 
     $("#about-a a.main-link").on('click', function(e) {
-      scrolltoSection(this, getPosition(about) - 100, e);
+      scrolltoSection(this, getPosition(about) - clickOffset, e);
     });
 
     $("#mission-a a").on('click', function(e) {
       var m = $("#about-a a");
-      scrolltoSection(m, getPosition(mission) - 100, e);
+      scrolltoSection(m, getPosition(mission) - clickOffset, e);
     });
 
     $("#specials-a a").on('click', function(e) {
-      scrolltoSection(this, getPosition(specials) - 100, e);
+      scrolltoSection(this, getPosition(specials) - clickOffset, e);
     });
 
     $("#contact-a a").on('click', function(e) {
-      scrolltoSection(this, getPosition(contact) - 100, e);
+      scrolltoSection(this, getPosition(contact) - clickOffset, e);
     });
 
     $("#menu-a a").on('click', function(e) {
-      scrolltoSection(this, getPosition(menu) - 100, e);
+      scrolltoSection(this, getPosition(menu) - clickOffset, e);
     });
 
     $("#menu-tabs a[data-toggle='tab']").click(function(e){
@@ -79,23 +82,23 @@ $(document).ready(function() {
           removeActive(links);
           $("#welcome-a").addClass("active");
         }
-        if (pos > getPosition(about) - 150 && pos < getPosition(specials) - 50) {
+        if (pos > getPosition(about) - offsetTop && pos < getPosition(specials) - offsetBottom) {
           removeActive(links);
           $("#about-a").addClass("active");
         }
-        if (pos > getPosition(specials) - 150 && pos < getPosition(mission) - 50) {
+        if (pos > getPosition(specials) - offsetTop && pos < getPosition(mission) - offsetBottom) {
           removeActive(links);
           $("#specials-a").addClass("active");
         }
-        if (pos > getPosition(mission) - 150 && pos < getPosition(menu) - 50) {
+        if (pos > getPosition(mission) - offsetTop && pos < getPosition(menu) - offsetBottom) {
           removeActive(links);
           $("#about-a").addClass("active");
         }
-        if (pos > getPosition(menu) - 150 && pos < getPosition(contact) - 50) {
+        if (pos > getPosition(menu) - offsetTop && pos < getPosition(contact) - offsetBottom) {
           removeActive(links);
           $("#menu-a").addClass("active");
         }
-        if (pos > getPosition(contact) - 150) {
+        if (pos > getPosition(contact) - offsetTop) {
           removeActive(links);
           $("#contact-a").addClass("active");
         }
