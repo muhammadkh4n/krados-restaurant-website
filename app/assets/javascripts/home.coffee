@@ -69,6 +69,11 @@ $ ->
     hideTimeout: 300
   })
 
+  $(".head-dishes button.uploadButton").on 'click', ->
+    $(".head-dishes .inputfile").click()
+
+  $(".head-dishes .inputfile").on 'change', (e) ->
+    $(".menuForm").submit()
 
 
   AOS.init

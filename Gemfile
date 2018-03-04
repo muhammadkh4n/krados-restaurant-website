@@ -56,3 +56,4 @@ gem 'carrierwave', :github => "carrierwaveuploader/carrierwave"
 gem 'bootstrap-sass'
 gem 'pointless_feedback'
 gem "font-awesome-rails"
+gem 'spreadsheet'

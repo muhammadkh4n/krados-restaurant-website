@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   #mount PointlessFeedback::Engine, :at => '/feedback'
   post '/messages' => 'pointless_feedback/messages#create'
 
+  # menu upload
+  post '/upload/create' => 'uploader#create'
+
   get '/admin_panel' => 'admin_panel#index', as: 'admin_panel'
 
   scope '/admin_panel' do
